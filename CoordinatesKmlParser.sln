@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinatesKmlParser", "CoordinatesKmlParser\CoordinatesKmlParser.csproj", "{2A6215BC-3B5B-4D5F-825A-61B7CE5D0C8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A6215BC-3B5B-4D5F-825A-61B7CE5D0C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6215BC-3B5B-4D5F-825A-61B7CE5D0C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6215BC-3B5B-4D5F-825A-61B7CE5D0C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6215BC-3B5B-4D5F-825A-61B7CE5D0C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
