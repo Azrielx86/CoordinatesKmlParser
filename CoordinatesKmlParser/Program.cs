@@ -51,13 +51,15 @@ public static partial class Program
     private static void GetCoordinates(string filepath, bool invert = true)
     {
         var doc = XDocument.Load(filepath);
+        const StringSplitOptions splitOptions = StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries;
+        
         var coordinates = (from c in doc.Descendants() where c.Name.LocalName == "coordinates" select new XElement(c)).ToList();
-
+        
         var points = coordinates
             .Select(v => SpecialCharacters().Replace(v.Value, "")
-                .Split(",0", StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+                .Split(",0", splitOptions)
                 .Select(c =>
-                    c.Split(",", StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+                    c.Split(",", splitOptions)
                         .Select(float.Parse).ToArray()));
 
         if (invert)
