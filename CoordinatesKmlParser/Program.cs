@@ -51,10 +51,7 @@ public static partial class Program
     private static void GetCoordinates(string filepath, bool invert = true)
     {
         var doc = XDocument.Load(filepath);
-
-        var placemarks = (from x in doc.Descendants() where x.Name.LocalName == "Placemark" select new XElement(x)).ToList();
-        var polygons = (from p in placemarks.Descendants() where p.Name.LocalName == "Polygon" select new XElement(p)).ToList();
-        var coordinates = (from c in polygons.Descendants() where c.Name.LocalName == "coordinates" select new XElement(c)).ToList();
+        var coordinates = (from c in doc.Descendants() where c.Name.LocalName == "coordinates" select new XElement(c)).ToList();
 
         var points = coordinates
             .Select(v => SpecialCharacters().Replace(v.Value, "")
